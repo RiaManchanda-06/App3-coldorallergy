@@ -50,7 +50,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-function results () {
+function resultsPercent () {
 	var resultText = document.getElementById("results");
 	var allergyPercent = (allergy_count/4)*100;
 	var coldPercent = (cold_count/4)*100; 
@@ -117,9 +117,9 @@ function results () {
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a fever? </p>
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#three"  onclick="coldAdd(); class="w3-btn w3-black"> Yes</a>
 	</div>
-        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <a href="#three"  onclick="allergyAdd(); ;" class="w3-btn w3-black">No</a>
 	
 </div>	
 
@@ -145,6 +145,15 @@ function results () {
 	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+</div>
+</div>
+	<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h2>Results</h2>
+	</div>
+	<div id="content" class="w3-container">
+	<p id="results"></p>
+	<a href="#five"  onclick="resultsPercent();" class="w3-btn w3-black"> Click for results!! </a>
 </div>
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
