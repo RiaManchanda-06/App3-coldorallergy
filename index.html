@@ -46,12 +46,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         }
 
+<!-- I added variables to account for allergies. -->
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count)
+	function coldAdd(){
+        cold_count = cold_count + 1;
+	alert(cold_count)
         }
 
+<!-- I added variables to account for cold. -->
 
 function resultsPercent () {
 	var resultText = document.getElementById("results");
@@ -61,7 +63,28 @@ function resultsPercent () {
 }	
   </script>
 
+<!-- This adds a point to every answer coded as yes-->
 
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
 
 <style>	
 .body {
@@ -109,8 +132,8 @@ function resultsPercent () {
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-
-
+<!-- This is JAVA script to trigger the button to run the action -->
+<!-- I created the yes and no buttons -->
 	
 </div>
 
@@ -124,8 +147,8 @@ function resultsPercent () {
 	<a href="#three" onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
 </div>
 	<a href="#three" onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
-
-	
+<!-- I created the yes and no buttons -->
+<!-- This is JAVA script to trigger the button to run the action -->	
 </div>	
 
 
@@ -139,7 +162,9 @@ function resultsPercent () {
 	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
         <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-	
+<!-- I created the yes and no buttons -->
+<!-- This is JAVA script to trigger the button to run the action -->
+<!-- I changed the code to click to the next page -->	
 
 </div>
 	
@@ -154,6 +179,9 @@ function resultsPercent () {
 	</div>
         <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
+<!-- I created the yes and no buttons -->
+<!-- This is JAVA script to trigger the button to run the action -->
+	
 </div>
 	<div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
@@ -165,7 +193,10 @@ function resultsPercent () {
 	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
         <a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
-
+<!-- I added a question to diagnose cold -->
+<!-- I created the yes and no buttons -->
+<!-- This is JAVA script to trigger the button to run the action -->
+		
 </div>
 	
 	<div class="page" id="six">
@@ -178,17 +209,21 @@ function resultsPercent () {
 	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 	</div>
         <a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-
+<!-- I added a question to diagnose allergy -->
+<!-- I created the yes and no buttons -->
+<!-- This is JAVA script to trigger the button to run the action -->
+		
 </div>
 	<div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h2>Results</h2>
+<!-- I created a results page  -->
 	</div>
 	<div id="content" class="w3-container">
 	<p id="results"></p>
 	<a href="#seven"  onclick="resultsPercent();" class="w3-btn w3-black"> Click for results!! </a>
 </div>
-
+<!-- I added the percentage of each allergy and cold. -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
